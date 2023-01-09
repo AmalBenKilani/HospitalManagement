@@ -4,7 +4,7 @@ const Doctor = require('../models/doctorModel')
 exports.addNewDoctor = async (req, res) => {
     const newBody = JSON.parse(req.body.info)
     try {
-        const imagePath = `http://localhost:8000/uploads/tmp/${req.file.filename}`
+        const imagePath = `http://localhost:8000/uploads/${req.file.filename}`
         const newDoctor = await Doctor.create({ ...newBody, Image: imagePath })
 
         res.json(newDoctor)
