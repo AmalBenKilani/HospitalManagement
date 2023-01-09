@@ -14,7 +14,7 @@ app.use('/api/v1/patients',require('./routes/patientRoutes'))
 app.use('/api/v1/doctors',require('./routes/doctorRoutes'))
 app.use('/api/v1/chat',require('./routes/chatRoutes'))
 app.use('/api/v1/message',require('./routes/messageRoutes'))
-app.use('/uploads', express.static(path.join(__dirname,'./','/uploads','/tmp/')))
+app.use('/uploads', express.static(path.join(__dirname,'./','/uploads')))
 app.use('/api/v1/appointments',require('./routes/appointmentRoutes'))
 
 
